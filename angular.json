@@ -29,8 +29,17 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles",
+                "src/assets"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              "src/styles/customTheme.scss",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
