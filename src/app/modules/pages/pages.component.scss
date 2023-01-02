@@ -1,0 +1,132 @@
+@import "variables";
+@import "mixins";
+
+#root {
+  height: 100%;
+  width: 100%;
+
+  .main {
+    .main__container {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+
+      sidebar {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        overflow-y: auto;
+        background-color: $sidebar-color;
+        transition: transform 0.3s ease-out 0s;
+        transform: translateX(-100%);
+        @include box-shadow-right;
+
+        @include desktop {
+          transition: transform 0.3s ease-out 0s;
+          transform: translateX(-70%) ;
+
+          &:hover {
+            transition: transform 0.3s ease-out 0s;
+            transform: translateX(0%) !important;
+          }
+        }
+      }
+
+      .block__container {
+        display: none;
+        opacity: 0;
+        position: fixed;
+        z-index: 1;
+        inset: 0;
+        background-color: rgb(0, 0, 0, 0.3);
+
+        @include desktop {
+          display: none !important;
+        }
+      }
+
+      .wl__main_container {
+        width: 100%;
+        position: absolute;
+        transition: left 0.3s ease-out 0s, right 0.3s ease-out 0s;
+
+        @include desktop {
+          transition: transform 0.3s ease-out 0s;
+          //inset: 0 0 0 244px;
+          inset: 0 0 0 75px;
+          width: calc(100% - 75px);
+        }
+
+        topbar {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          padding: 0 .5rem;
+          position: relative;
+          min-height: $topbar-height;
+          background-color: $background-components;
+          @include box-shadow-toolbar;
+
+          @include tablet {
+          }
+          @include desktop {
+          }
+        }
+        breadcrumbs {
+
+        }
+        .wrapper__scroll {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: calc(100vh - 50px);
+          margin-right: -17px;
+          margin-bottom: -17px;
+          //background-image: url("../../../assets/img/background_dashboard.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+
+          .wrapper {
+            position: absolute;
+            inset: 0;
+
+            .wrapper__container {
+              padding: 1.3rem;
+            }
+          }
+        }
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        height: 40px;
+        width: 100%;
+        padding: 0 2px;
+
+      }
+    }
+  }
+}
+
+.show-sidebar {
+  transition: transform 0.3s ease-out 0s;
+  transform: translateX(0%) !important;
+}
+
+.show-block {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.reducer-topbar {
+  transition: transform 0.3s ease-out 0s;
+  inset: 0 0 0 244px !important;
+  width: calc(100% - 244px) !important;
+}
+
+

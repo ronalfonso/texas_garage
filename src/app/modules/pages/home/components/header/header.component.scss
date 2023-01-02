@@ -1,0 +1,50 @@
+@import "mixins";
+@import "variables";
+
+
+.social {
+  width: 100%;
+  height: 35px;
+  background-color: #d40036;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+
+  .right {
+    padding: 0 5px;
+    button {
+      color: $white !important;
+    }
+  }
+
+  .left {
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    .content {
+      display: none;
+
+      button {
+        color: $white !important;
+      }
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+}
+
+.contact {
+  .logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 280px;
+    }
+  }
+}
