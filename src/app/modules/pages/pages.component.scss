@@ -11,29 +11,6 @@
       inset: 0;
       overflow: hidden;
 
-      sidebar {
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        overflow-y: auto;
-        background-color: $sidebar-color;
-        transition: transform 0.3s ease-out 0s;
-        transform: translateX(-100%);
-        @include box-shadow-right;
-
-        @include desktop {
-          transition: transform 0.3s ease-out 0s;
-          transform: translateX(-70%) ;
-
-          &:hover {
-            transition: transform 0.3s ease-out 0s;
-            transform: translateX(0%) !important;
-          }
-        }
-      }
-
       .block__container {
         display: none;
         opacity: 0;
@@ -53,10 +30,7 @@
         transition: left 0.3s ease-out 0s, right 0.3s ease-out 0s;
 
         @include desktop {
-          transition: transform 0.3s ease-out 0s;
-          //inset: 0 0 0 244px;
-          inset: 0 0 0 75px;
-          width: calc(100% - 75px);
+
         }
 
         topbar {
@@ -70,7 +44,7 @@
           background-color: $background-components;
           @include box-shadow-toolbar;
 
-          @include tablet {
+          @include table {
           }
           @include desktop {
           }

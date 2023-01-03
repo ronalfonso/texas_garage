@@ -10,23 +10,23 @@
     @content
   }
 }
-@mixin phablet() {
-  @media only screen and (min-width: #{$phablet}){
+@mixin phable() {
+  @media only screen and (min-width: #{$phable}){
     @content
   }
 }
-@mixin tablet-small() {
-  @media only screen and (min-width: #{$tablet-small}){
+@mixin table-small() {
+  @media only screen and (min-width: #{$table-small}){
     @content
   }
 }
-@mixin tablet() {
-  @media only screen and (min-width: #{$tablet}){
+@mixin table() {
+  @media only screen and (min-width: #{$table}){
     @content
   }
 }
-@mixin tablet-wide() {
-  @media only screen and (min-width: #{$tablet-wide}){
+@mixin table-wide() {
+  @media only screen and (min-width: #{$table-wide}){
     @content
   }
 }
@@ -52,12 +52,12 @@
 }
 
 @mixin phoneminmax() {
-  @media only screen and (min-width: #{$phone}) and (max-width: #{$tablet-small}){
+  @media only screen and (min-width: #{$phone}) and (max-width: #{$table-small}){
     @content
   }
 }
-@mixin tabletominmax() {
-  @media only screen and (min-width: #{$tablet-small}) and (max-width: #{$desktop}){
+@mixin tableominmax() {
+  @media only screen and (min-width: #{$table-small}) and (max-width: #{$desktop}){
     @content
   }
 }

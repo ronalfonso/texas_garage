@@ -1,14 +1,14 @@
 :root {
   --background: rgb(248, 248, 248);
   --background-components: rgb(255, 255, 255);
-  --primary: rgb(128, 0, 142);
-  --primary-r: 128;
+  --primary: rgb(212, 0, 54);
+  --primary-r: 212;
   --primary-g: 0;
-  --primary-b: 142;
-  --secondary: rgb(213, 96, 226);
-  --secondary-r: 213;
-  --secondary-g: 96;
-  --secondary-b: 226;
+  --primary-b: 54;
+  --secondary: rgb(0, 0, 173);
+  --secondary-r: 0;
+  --secondary-g: 0;
+  --secondary-b: 173;
   --help: rgba(156, 39, 179, 1);
   --help-r: 165;
   --help-g: 39;
@@ -45,10 +45,10 @@
 //============= Size Screen ============= border-left: 5px solid $success_message_color;
 $phone: 400px;
 $phone-wide:   480px;
-$phablet:      560px;
-$tablet-small: 640px;
-$tablet:       768px;
-$tablet-wide:  1024px;
+$phable:      560px;
+$table-small: 640px;
+$table:       768px;
+$table-wide:  1024px;
 $desktop:      1248px;
 $desktop-wide: 1440px;
 

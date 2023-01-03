@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import {RouterLink, RouterLinkActive} from "@angular/router";
+import {MenuModule} from "primeng/menu";
+import {ButtonModule} from "primeng/button";
 
 
 
@@ -10,11 +13,16 @@ import { NavbarComponent } from './navbar/navbar.component';
     FooterComponent,
     NavbarComponent
   ],
-  exports: [
-    FooterComponent
-  ],
+    exports: [
+        FooterComponent,
+        NavbarComponent
+    ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink,
+    RouterLinkActive,
+    MenuModule,
+    ButtonModule
   ]
 })
 export class UiModule { }

@@ -1,1 +1,36 @@
-<p>navbar works!</p>
+<div class="navbar-desktop">
+  <ul>
+    <li [routerLink]="['']" [routerLinkActive]="['active-item']">
+      <span>Home</span>
+    </li>
+    <li [routerLink]="['services']" [routerLinkActive]="['active-item']">
+      <span>Services</span>
+    </li>
+    <li [routerLink]="['gallery']" [routerLinkActive]="['active-item']">
+      <span>Gallery</span>
+    </li>
+    <li [routerLink]="['services-areas']" [routerLinkActive]="['active-item']">
+      <span>Service Areas</span>
+    </li>
+    <li [routerLink]="['brands']" [routerLinkActive]="['active-item']">
+      <span>Brands</span>
+    </li>
+    <li class="search">
+      <span> <i class="pi pi-search"></i></span>
+    </li>
+  </ul>
+</div>
+
+<div class="navbar-mobile">
+  <div class="content">
+    <div class="menu" (click)="menu.toggle($event)">
+      <button type="button" pButton icon="pi pi-bars" ></button>
+      <p-menu #menu [popup]="true" [model]="items"></p-menu>
+    </div>
+    <div class="search">
+      <span> <i class="pi pi-search"></i></span>
+    </div>
+  </div>
+
+</div>
+

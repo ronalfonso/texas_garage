@@ -1,7 +1,7 @@
 <div class="social">
   <div class="left">
     <div class="content">
-      izquierda
+      Welcome to The Texas Garage Doors
     </div>
 
   </div>
@@ -15,12 +15,46 @@
 </div>
 <div class="contact">
   <div class="logo">
-    <img src="../../../../../../assets/img/logo.png" alt="The Texas Garage door" />
+    <img src="../../../../../../assets/img/logo.png" alt="The Texas Garage door"/>
+  </div>
+  <div class="contacts" *ngFor="let contact of contacts">
+    <div class="icon_contact">
+      <i class="pi {{contact.icon}}"></i>
+    </div>
+    <div class="data_contact">
+      <div class="title">
+        {{contact.title}}
+      </div>
+      <div class="subtitle">
+        {{contact.subtitle}}
+      </div>
+    </div>
   </div>
 </div>
 <div class="menu">
-  menu
+  <app-navbar></app-navbar>
 </div>
 <div class="carousel">
-  carrusel
+  <p-carousel [value]="carousel" styleClass="custom-carousel" [numVisible]="1" [numScroll]="1" [circular]="true"
+              [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+      <div class="product-item">
+        <div class="product-item-content">
+          <div class="mb-3">
+            <img src="{{product.url}}" [alt]="product.name"
+                 class="product-image"/>
+          </div>
+          <div class="observation">
+            <div class="title">
+              {{product.title}}
+            </div>
+            <div class="description">
+              {{product.description}}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
 </div>

@@ -6,6 +6,7 @@ import {UiModule} from "./ui/ui.module";
 import { HeaderComponent } from './home/components/header/header.component';
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
+import {CarouselModule} from "primeng/carousel";
 
 
 
@@ -14,12 +15,13 @@ import {RippleModule} from "primeng/ripple";
     HomeComponent,
     HeaderComponent
   ],
-  imports: [
-    CommonModule,
-    PagesRoutingModule,
-    UiModule,
-    ButtonModule,
-    RippleModule
-  ]
+    imports: [
+        CommonModule,
+        PagesRoutingModule,
+        UiModule,
+        ButtonModule,
+        RippleModule,
+        CarouselModule
+    ]
 })
 export class PagesModule { }
