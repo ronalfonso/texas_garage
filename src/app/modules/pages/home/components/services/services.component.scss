@@ -1,0 +1,10 @@
+@import "variables";
+@import "mixins";
+
+.services__container {
+  width: 100%;
+  .services_content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
