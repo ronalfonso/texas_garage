@@ -1,3 +1,32 @@
 @import "mixins";
 @import "variables";
 
+.menu {
+  position: relative;
+  top: 115px;
+  z-index: 10;
+  transition: 0.4s;
+}
+
+
+/* Page content */
+
+.content {
+  position: absolute;
+  top: 0;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+
+
+/* Add some top padding to the page content to prevent sudden quick movement */
+
+.sticky + .content {
+  padding-top: 102px;
+}
