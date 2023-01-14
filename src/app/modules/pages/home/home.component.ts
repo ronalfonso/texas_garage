@@ -13,7 +13,6 @@ export class HomeComponent {
 
   constructor() {
     document.addEventListener('scroll', () => {
-      console.log('hola');
       this.addSticky();
     })
   }
@@ -22,11 +21,10 @@ export class HomeComponent {
       const menu = document.getElementById('menu');
       const content = document.getElementById('content');
       if (menu != null && content != null) {
-        const rectMenu = menu.getBoundingClientRect();
         const rectContent = content.getBoundingClientRect();
-          if (rectMenu.top <= 0 && rectContent.top <= -115) {
+        if (rectContent.top <= -115) {
             menu.classList.add('sticky')
-          } else if (rectContent.top > -200 && rectContent.top < 0) {
+          } else if (rectContent.top > -115 && rectContent.top <= 0) {
             menu.classList.remove('sticky')
           }
 

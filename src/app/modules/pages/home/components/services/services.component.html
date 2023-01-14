@@ -1,10 +1,16 @@
 <div class="services__container">
   <div class="services_content">
-    <div class="card__service">
+    <div class="card__service" *ngFor="let service of services">
       <div class="card_header">
         <div class="rombo">
-
-          <img src="../../../../../../assets/img/replacement.png" height="224" width="225"/></div>
+          <img src="{{service.img}}" alt="{{service.title}}"/>
+        </div>
+      </div>
+      <div class="card_title">
+        <span>{{service.title}}</span>
+      </div>
+      <div class="card_content">
+        <p>{{service.description}}</p>
       </div>
     </div>
   </div>
