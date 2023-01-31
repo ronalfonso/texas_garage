@@ -1,1 +1,23 @@
-<p>footer works!</p>
+<div class="footer_content">
+  <div class="contact">
+    <div class="logo">
+      <img src="./assets/img/logo.png" alt="The Texas Garage door"/>
+    </div>
+    <div class="contacts_container">
+      <div class="contacts" *ngFor="let contact of contacts">
+        <div class="icon_contact">
+          <i class="pi {{contact.icon}}"></i>
+        </div>
+        <div class="data_contact">
+          <div class="title">
+            {{contact.title}}
+          </div>
+          <div class="subtitle">
+            {{contact.subtitle}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

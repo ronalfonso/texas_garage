@@ -1,5 +1,4 @@
-import {Component, HostListener, OnInit} from '@angular/core';
-import {BehaviorSubject} from "rxjs";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +7,6 @@ import {BehaviorSubject} from "rxjs";
 })
 export class HomeComponent {
 
-  currentSection: BehaviorSubject<String> = new BehaviorSubject<String>('menu')
   sections: string[] = ['menu', 'content']
 
   constructor() {

@@ -8,6 +8,8 @@ import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";
 import {CarouselModule} from "primeng/carousel";
 import { ServicesComponent } from './home/components/services/services.component';
+import {TooltipModule} from "primeng/tooltip";
+import { BrandsComponent } from './home/components/brands/brands.component';
 
 
 
@@ -15,7 +17,8 @@ import { ServicesComponent } from './home/components/services/services.component
   declarations: [
     HomeComponent,
     HeaderComponent,
-    ServicesComponent
+    ServicesComponent,
+    BrandsComponent
   ],
     imports: [
         CommonModule,
@@ -23,7 +26,8 @@ import { ServicesComponent } from './home/components/services/services.component
         UiModule,
         ButtonModule,
         RippleModule,
-        CarouselModule
+        CarouselModule,
+        TooltipModule
     ]
 })
 export class PagesModule { }

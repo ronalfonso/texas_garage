@@ -1,4 +1,10 @@
 <div class="services__container">
+  <div class="header_services">
+    <div class="title">
+      <h2>SERVICES WE OFFER</h2>
+    </div>
+    <div class="border"></div>
+  </div>
   <div class="services_content">
     <div class="card__service" *ngFor="let service of services">
       <div class="card_header">
@@ -15,4 +21,36 @@
     </div>
   </div>
 
+</div>
+
+<div class="more_service_content">
+  <div class="header_services">
+    <div class="title">
+      <h2>MORE SERVICES</h2>
+    </div>
+    <div class="border"></div>
+  </div>
+  <div class="services_content">
+    <div class="card_more_service" *ngFor="let service of moreServices">
+      <div pTooltip="Soon">
+        <span>{{service.name}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="area_service_content">
+  <div class="header_services">
+    <div class="title">
+      <h2>SERVICES AREA</h2>
+    </div>
+    <div class="border"></div>
+  </div>
+  <div class="services_content">
+    <div class="card_more_service" *ngFor="let service of areasServices">
+      <div pTooltip="Soon">
+        <span>{{service.name}}</span>
+      </div>
+    </div>
+  </div>
 </div>

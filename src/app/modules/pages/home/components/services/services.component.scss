@@ -6,6 +6,24 @@
   margin: 0 auto;
   margin-top: 2.5rem;
 
+  .header_services {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+
+    .title {
+      color: $primary;
+    }
+
+    .border {
+      border-bottom: 4px solid $primary;
+      width: 60px;
+    }
+  }
+
   .services_content {
     width: 100%;
     display: grid;
@@ -54,6 +72,91 @@
 
     .card_content {
       font-size: 12px;
+    }
+  }
+}
+
+.more_service_content {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 450px;
+  background-color: #e6e6e6;
+
+  .header_services {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $primary;
+
+    .border {
+      border-bottom: 4px solid $primary;
+      width: 60px;
+    }
+  }
+
+  .services_content {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+
+    .card_more_service {
+      display: flex;
+      justify-content: center;
+      div {
+        @include card;
+        padding: .75rem;
+        width: 60%;
+        background-color: $white;
+        cursor: pointer;
+      }
+
+    }
+  }
+}
+
+.area_service_content {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 520px;
+
+  .header_services {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $primary;
+
+    .border {
+      border-bottom: 4px solid $primary;
+      width: 60px;
+    }
+  }
+
+  .services_content {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+
+    .card_more_service {
+      display: flex;
+      justify-content: center;
+      div {
+        @include card;
+        padding: .75rem;
+        width: 60%;
+        background-color: $white;
+        cursor: pointer;
+      }
+
     }
   }
 }
